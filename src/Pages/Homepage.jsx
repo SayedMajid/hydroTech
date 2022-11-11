@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer";
 import video from "../Assets/hompage-video.webm";
 import { Box, Flex, GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 import "../style.css";
@@ -8,8 +8,8 @@ import "../style.css";
 const Homepage = () => {
   return (
     <div>
+      <Navbar />
       <Box>
-        <Navbar />
         <Box
           className="videoWrapper"
           display={{ base: "inline", md: "inline", lg: "inline" }}
@@ -123,9 +123,15 @@ const Homepage = () => {
             md: "repeat(3,1fr)",
             base: "repeat(2,1fr)",
           }}
+          overflow="hidden"
         >
           {projects.map((el) => (
-            <GridItem>
+            <GridItem
+              boxShadow={"sm"}
+              transition="0.25s all ease-in-out"
+              _hover={{ transform: "scale(1.04)" }}
+              overflow="hidden"
+            >
               <img src={el.img} alt="" />
               <Text
                 p="20px"

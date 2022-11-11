@@ -21,7 +21,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <Box position="sticky" top={0}>
+    <Box position="sticky" top={0}  >
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
